@@ -21,7 +21,7 @@ const NavBar = () => {
           Dashboard
         </Link>
         <Link
-          href="issues"
+          href="/issues"
           className={`btn btn-ghost text-xl ${classNames({
             "text-lime-400": activeUrl === "/issues",
           })}`}

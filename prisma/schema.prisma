@@ -30,6 +30,6 @@ model Issue {
 
 enum Status {
   open
-  pending
+  in_progress
   closed
 }
