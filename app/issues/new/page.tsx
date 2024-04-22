@@ -1,9 +1,8 @@
-import { issueSchema } from "@/app/api/issues/route";
-import "easymde/dist/easymde.min.css";
-import { z } from "zod";
-import IssueForm from "../_component/IssueForm";
+import dynamic from "next/dynamic";
 
-type Inputs = z.infer<typeof issueSchema>;
+const IssueForm = dynamic(() => import("@/app/issues/_component/IssueForm"), {
+  ssr: false,
+});
 
 const NewIssuePage = () => {
   return <IssueForm />;
